@@ -1,0 +1,15 @@
+h1{
+    text-align: center;
+    color: rgb(35, 19, 19);
+}
+
+body{
+    background-color: #e1b0ce;
+    text-align: center;
+    color: rgb(24, 13, 13);
+}
+ul.lista{
+    text-align: center;
+    color: rgb(35, 19, 19);
+    list-style-type:square;
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/stilos.css">
+</head>
+<body>
+    <div id="app">
+        <h1>Encuesta de Programación</h1>
+        <div v-if="question1Visible">
+            
+            <p>¿Te gusta programar?</p>
+            <button @click="answerYes">Sí</button>
+            <button @click="answerNo">No</button>
+        </div>
+        <hr/>
+        <div v-if="question2Visible">
+            <label for="years">¿Cuántos años llevas programando?</label>
+            <input type="text" v-model="yearsProgramming" id="years" />  
+        <hr/>
+            <label for="languages">¿Qué programas conoces?</label>
+            <input type="text" v-model="knownLanguages" @keyup.enter="addLanguages" id="languages" />
+            <button @click="addLanguages">Agregar</button>
+            <ul class="lista">
+                <li v-for="languages" :key="index">{{ languages }}</li>
+            </ul>
+        </div>
+      
+
+    </div>
+
+   
+    
+</body>
+<script src="https://unpkg.com/vue@2.7.14/dist/vue.js"></script>
+<script src="./js/javascrip.js"></script>
+</html>
